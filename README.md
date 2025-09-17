@@ -1,90 +1,176 @@
-# LIVELINK Admin Console# LIVELINK Admin Console# LIVELINK Admin Console Frontend
+# LIVELINK Admin Console (Frontend)# LIVELINK Admin Console# LIVELINK Admin Console# LIVELINK Admin Console Frontend
 
 
 
-Complete ridesharing admin dashboard built with React 18, TypeScript, and Tailwind CSS.
+A web-based admin dashboard frontend for the LIVELINK ridesharing platform. Enables administrators to manage drivers, users, rides, safety, support, and system settings.
 
 
 
-## 🚀 Quick StartA complete admin dashboard for managing ridesharing operations. Built with React 18, TypeScript, and Tailwind CSS.A comprehensive admin dashboard for ridesharing platform management. Built with React 18, TypeScript, Tailwind CSS, and Storybook, following Atomic Design methodology for scalable component architecture.
+---Complete ridesharing admin dashboard built with React 18, TypeScript, and Tailwind CSS.
 
 
 
-```bash
-
-git clone https://github.com/45nivas/LIVELINK_admin_console_Frontend.git
-
-cd LIVELINK_admin_console_Frontend## 🚀 Quick Start## 🚀 Features
-
-npm install
-
-npm run dev          # App: http://localhost:5173
-
-npm run storybook    # Docs: http://localhost:6006
-
-``````bash### Core Admin Modules (100% Complete MVP)
+## 🚀 Tech Stack
 
 
+
+- **Frontend**: React 18, TypeScript  ## 🚀 Quick StartA complete admin dashboard for managing ridesharing operations. Built with React 18, TypeScript, and Tailwind CSS.A comprehensive admin dashboard for ridesharing platform management. Built with React 18, TypeScript, Tailwind CSS, and Storybook, following Atomic Design methodology for scalable component architecture.
+
+- **Styling**: Tailwind CSS  
+
+- **Component Library & Docs**: Storybook  
+
+- **Build Tool**: Vite  
+
+- **Architecture**: Atomic Design```bash
+
+
+
+---git clone https://github.com/45nivas/LIVELINK_admin_console_Frontend.git
+
+
+
+## ⚙️ Features / Admin Modules (MVP)cd LIVELINK_admin_console_Frontend## 🚀 Quick Start## 🚀 Features
+
+
+
+| Module | What it does |npm install
+
+|--------|---------------|
+
+| Dashboard | Overview of rides, earnings, active users/drivers, metrics |npm run dev          # App: http://localhost:5173
+
+| Driver Management | Driver applications, document verification, status control |
+
+| User Management | User/KYC verification, blocking/suspending, account control |npm run storybook    # Docs: http://localhost:6006
+
+| Ride Management | Tracking rides, handling disputes & cancellations |
+
+| Verification Queue | Workflow for approving / rejecting documents |``````bash### Core Admin Modules (100% Complete MVP)
+
+| Emergency & Safety | SOS alerts, incident reports, safety protocols |
+
+| Customer Support | Ticket system, complaints & resolutions |
+
+| System Settings | Manage fares, commissions, safety rules, platform configuration |
 
 ## 🏗️ What's Built# Clone and install
 
+---
 
+
+
+## 📥 Getting Started (Local Setup)
 
 **8 Complete Admin Modules:**git clone https://github.com/45nivas/LIVELINK_admin_console_Frontend.git- **🏠 Dashboard**: Real-time metrics, ride statistics, and platform overview
 
+### Prerequisites
+
 - 🏠 **Dashboard** - Real-time metrics and overview
 
-- 🚗 **Driver Management** - Applications, approvals, documentscd LIVELINK_admin_console_Frontend- **👨‍💼 Driver Management**: Complete driver lifecycle from application to approval
+- Node.js version >= 18  
+
+- npm (or yarn)  - 🚗 **Driver Management** - Applications, approvals, documentscd LIVELINK_admin_console_Frontend- **👨‍💼 Driver Management**: Complete driver lifecycle from application to approval
+
+- (Optional) Yarn or pnpm
 
 - 👥 **User Management** - KYC verification, safety controls  
 
+### Installation
+
 - 🚕 **Ride Management** - Live tracking, disputes, refundsnpm install- **👥 User Management**: Rider account management, KYC verification, and safety controls
 
-- ✅ **Verification Queue** - Document approval workflow
+```bash
 
-- 🚨 **Emergency & Safety** - SOS alerts, incident response- **🚗 Ride Management**: Trip tracking, dispute resolution, and cancellation handling
+git clone https://github.com/45nivas/LIVELINK_admin_console_Frontend.git- ✅ **Verification Queue** - Document approval workflow
+
+cd LIVELINK_admin_console_Frontend
+
+npm install- 🚨 **Emergency & Safety** - SOS alerts, incident response- **🚗 Ride Management**: Trip tracking, dispute resolution, and cancellation handling
+
+```
 
 - 💬 **Customer Support** - Ticket system, complaint handling
 
+### Running
+
 - ⚙️ **System Settings** - Fares, commissions, safety rules# Start development- **✅ Verification Queue**: Document review and approval workflow for compliance
 
+```bash
 
+# start dev server (frontend)
+
+npm run dev
 
 ## 📁 Project Structurenpm run dev          # Main app at http://localhost:5173- **🚨 Emergency & Safety**: SOS response, incident management, and safety protocols
 
+# start component documentation
 
+npm run storybook
+
+```
 
 ```npm run storybook    # Component docs at http://localhost:6006- **💬 Customer Support**: Comprehensive ticket system with priority handling
 
-src/
+**Open in browser:**
+
+- **App**: http://localhost:5173src/
+
+- **Storybook**: http://localhost:6006
 
 ├── components/```- **⚙️ System Settings**: Platform configuration for fares, commissions, and safety rules
 
+---
+
 │   ├── atoms/                 # Basic UI components
+
+## 🗂 Project Structure
 
 │   │   ├── Button/           # Primary, secondary, outline, danger variants
 
-│   │   ├── Text/             # Typography with LIVELINK branding
+```
 
-│   │   ├── Logo/             # LIVELINK brand logo## 📱 Admin Modules### Technical Stack
+src/  │   │   ├── Text/             # Typography with LIVELINK branding
 
-│   │   └── Modal/            # Confirmation, alert dialogs
+├── atoms/           # Basic UI components (Buttons, Text, Logo, etc.)  
 
-│   ├── pages/                # Complete admin modules
+├── components/      # Larger components & molecule / organism level  │   │   ├── Logo/             # LIVELINK brand logo## 📱 Admin Modules### Technical Stack
 
-│   │   ├── dashboard/        # 🏠 Metrics, activity feed
+├── pages/           # Module-level UI: dashboard, users, drivers, rides…  
+
+├── data/            # Mock data for development  │   │   └── Modal/            # Confirmation, alert dialogs
+
+├── types/           # TypeScript interfaces / types  
+
+├── utils/           # Helper functions  │   ├── pages/                # Complete admin modules
+
+├── App.tsx          # Main app entry  
+
+└── AdminApp.tsx     # Admin navigation + layout  │   │   ├── dashboard/        # 🏠 Metrics, activity feed
+
+```
 
 │   │   ├── drivers/          # 🚗 Driver lifecycle management| Module | Purpose | Key Features |- **React 18** with TypeScript for type-safe development
 
+---
+
 │   │   ├── users/            # 👥 User accounts & KYC
+
+## 🔧 Contributing
 
 │   │   ├── rides/            # 🚕 Trip tracking & disputes|--------|---------|--------------|- **Tailwind CSS** for utility-first styling with custom LIVELINK branding
 
-│   │   ├── verification/     # ✅ Document approval
+1. **Fork** the project
 
-│   │   ├── emergency/        # 🚨 Safety & incidents| 🏠 **Dashboard** | Overview & metrics | Real-time stats, activity feed |- **Storybook** for component development and documentation
+2. **Create a feature branch**: `git checkout -b feature/<your-feature>`│   │   ├── verification/     # ✅ Document approval
 
-│   │   ├── support/          # 💬 Customer service
+3. **Follow existing patterns** & naming conventions
+
+4. **Add Storybook stories** / tests if applicable│   │   ├── emergency/        # 🚨 Safety & incidents| 🏠 **Dashboard** | Overview & metrics | Real-time stats, activity feed |- **Storybook** for component development and documentation
+
+5. **Commit with clear message**: `feat:`, `fix:`, `docs:`, etc.
+
+6. **Push and submit** a Pull Request│   │   ├── support/          # 💬 Customer service
 
 │   │   └── settings/         # ⚙️ Platform configuration| 🚗 **Drivers** | Driver management | Applications, approvals, documents |- **Atomic Design** methodology for organized component structure
 
