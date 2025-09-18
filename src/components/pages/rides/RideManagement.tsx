@@ -248,7 +248,7 @@ export const RideManagement: React.FC = () => {
   const completedCount = rides.filter(r => r.status === 'completed').length;
   const ongoingCount = rides.filter(r => r.status === 'ongoing').length;
   const disputedCount = rides.filter(r => r.status === 'disputed').length;
-  const cancelledCount = rides.filter(r => r.status === 'cancelled').length;
+  // const cancelledCount = rides.filter(r => r.status === 'cancelled').length; // Commented out as unused
   const totalRevenue = rides
     .filter(r => r.status === 'completed' && r.paymentStatus === 'completed')
     .reduce((sum, r) => sum + r.fare.total, 0);
